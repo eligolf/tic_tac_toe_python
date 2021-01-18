@@ -1,8 +1,8 @@
 # Introduction
-I made this game as a challenge to create the smallest possible code for a Tic Tac Toe game. The requirements I had on the game was as follows:
+I made this game as a challenge to create the smallest possible code for a Tic Tac Toe game in Python. The requirements on the game are as follows:
 
-- A "nice" playing experience (get user input and print the board after every move)
-- Draw/win/loss detection
+- A "nice" playing experience (ability to get user input and print the board after every move)
+- Having an unbeatable AI as opponent.
 - The ability to play again or exit after game is over 
 
 # Setup
