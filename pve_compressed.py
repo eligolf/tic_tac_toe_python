@@ -29,8 +29,8 @@ def r():
                         p(b)
                         break
         elif w == 1 and not (e(b, w) or e(b, -w)) and 0 in b:
-            move, score = n(b, 8, 1)
-            b[move], w = 1, w*-1
+            m, s = n(b, 8, 1)
+            b[m], w = 1, w*-1
             p(b)
         else:
             f = 'You won!' if e(b, -1) else 'AI won!' if e(b, 1) else 'Game drawn!'
