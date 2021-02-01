@@ -1,7 +1,7 @@
 def p(b):[print(['X'if i<0 else'O'if i>0 else' 'for i in b][x*3:3+x*3])for x in r(3)]
 def e(b,t):
-    for i,p in (0,1),(3,1),(6,1),(0,3),(1,3),(2,3),(0,4),(2,2):
-        if b[p[i]]==b[p[i+d]]==b[p[i+2*d]]==t:return 1
+    for i,d in (0,1),(3,1),(6,1),(0,3),(1,3),(2,3),(0,4),(2,2):
+        if b[i]==b[i+d]==b[i+2*d]==t:return 1
 def n(b,d,t):
     if e(b,t):return 0,9
     if e(b,-t):return 0,-9
