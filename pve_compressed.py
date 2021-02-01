@@ -6,7 +6,7 @@ def n(b,d,t):
     if e(b,t):return 0,9
     if e(b,-t):return 0,-9
     if all(b):return 0,0
-    x=-20
+    x=-10
     for m in r(9):
         if not b[m]:
             b[m]=t
@@ -23,14 +23,14 @@ def g():
             break
         if w>0:
             u=i(':')
-            if u.isnumeric():
+            if u.isdigit():
                 u=int(u)-1
                 if u<9 and not b[u]:
-                    b[u],w=-1,w*-1
+                    b[u],w=-1,-1
                     p(b)
         else:
             m,s=n(b,8,1)
-            b[m],w=1,w*-1
+            b[m],w=1,1
             p(b)
 i,r=input,range
 g()
