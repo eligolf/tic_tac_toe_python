@@ -25,7 +25,7 @@ def g():
             u=i(':')
             if u.isdigit():
                 u=int(u)-1
-                if u<9 and not b[u]:b[u],w=-1,-1
+                if u<9&~b[u]:b[u],w=-1,-1
         (m,s),b[m],w=n(b,8,1),1,1
 i,r=input,range
 g()
