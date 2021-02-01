@@ -17,7 +17,7 @@ def g():
     b,w=[0]*9,1
     while 1:
         p(b)
-        if all(b)or(e(b,w)or e(b,-w)):
+        if any((all(b),e(b,w),e(b,-w))):
             if i('?')!='y':break
             g()
             break
