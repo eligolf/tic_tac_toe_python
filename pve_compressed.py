@@ -10,7 +10,7 @@ def n(b,d,t):
     for m in r(9):
         if not b[m]:
             b[m]=t
-            s=-n(b,d-1,-t)[1]
+            _,s=-n(b,d-1,-t)
             b[m]=0
             if s>x:x,y=s,m
     return y,x
