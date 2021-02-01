@@ -26,8 +26,7 @@ def g():
         if w>0:
             while 1:
                 u=i(':')
-                if u.isnumeric():
-                    u=int(u)-1
+                if u.isnumeric():u=int(u)-1
                     if u<9 and not b[u]:
                         b[u],w=-1,w*-1
                         f(b)
