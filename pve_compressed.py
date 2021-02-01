@@ -5,7 +5,7 @@ def e(b,t):
 def n(b,d,t):
     if e(b,t):return 0,9
     if e(b,-t):return 0,-9
-    if 0 not in b:return 0,0
+    if all(b):return 0,0
     x=-20
     for m in r(9):
         if not b[m]:
@@ -17,7 +17,7 @@ def g():
     b,w=[0]*9,1
     p(b)
     while 1:
-        if 0 not in b or(e(b,w)or e(b,-w)):
+        if all(b)or(e(b,w)or e(b,-w)):
             if i('?')!='y':break
             g()
             break
