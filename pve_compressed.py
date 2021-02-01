@@ -1,7 +1,4 @@
-def p(b):[print([[' ','O','X'][i]for i in b][x:x+3])for x in [0,3,6]]
-def e(b,t):
-    for i,d in(0,1),(3,1),(6,1),(0,3),(1,3),(2,3),(0,4),(2,2):
-        if b[i]==b[i+d]==b[i+2*d]==t:return 1
+def e(b,t):return any([b[i]==b[i+d]==b[i+2*d]==t for i,d in((0,1),(3,1),(6,1),(0,3),(1,3),(2,3),(0,4),(2,2))])
 def n(b,d,t):
     if e(b,t):return 0,1
     if e(b,-t):return 0,-1
@@ -15,7 +12,7 @@ def n(b,d,t):
 def g():
     b,w=[0]*9,1
     while 1:
-        p(b)
+        [print([[' ','O','X'][i]for i in b][x:x+3])for x in[0,3,6]]
         if all(b)or(e(b,w)or e(b,-w)):
             if i('?')!='y':break
             g()
@@ -24,6 +21,6 @@ def g():
             u=i(':')
             if u.isdigit():
                 u=int(u)-1
-                if u<9&~b[u]:b[u],w=-1,-1
+                if u<9 and not b[u]:b[u],w=-1,-1
         else:(m,s),b[m],w=n(b,8,1),1,1
 i=input;g()
