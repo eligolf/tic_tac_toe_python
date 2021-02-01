@@ -1,7 +1,5 @@
 def p(b):[print(['X'if i<0 else'O'if i>0 else' 'for i in b][x*3:3+x*3])for x in r(3)]
-def e(b,t):
-    for p in [0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]:
-        if b[p[0]]==b[p[1]]==b[p[2]]==t:return 1
+def e(b,t):return any([b[p[0]]==b[p[1]]==b[p[2]]==t for p in ([0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6])])
 def n(b,d,t):
     if e(b,t):return 0,9
     if e(b,-t):return 0,-9
@@ -17,7 +15,7 @@ def g():
     b,w=[0]*9,1
     p(b)
     while 1:
-        if 0 not in b or (e(b,w)or e(b,-w)):
+        if 0 not in b or(e(b,w)or e(b,-w)):
             if i('?')!='y':break
             g()
             break
