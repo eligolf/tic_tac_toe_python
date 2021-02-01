@@ -8,7 +8,7 @@ def n(b,d,t):
     if all(b):return 0,0
     x=-2
     for m in r(9):
-        if not b[m]:
+        if b[m]==0:
             b[m]=t
             s,b[m]=-n(b,d-1,-t)[1],0
             if s>x:x,y=s,m
