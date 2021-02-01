@@ -19,8 +19,7 @@ def g():
         p(b)
         if all(b)or(e(b,w)or e(b,-w)):
             if i('?')!='y':break
-            g()
-            break
+            g();break
         if w>0:
             u=i(':')
             if u.isdigit():
