@@ -9,8 +9,7 @@ def n(b,d,t):
     x=-2
     for m in range(9):
         if b[m]==0:
-            b[m]=t
-            s,b[m]=-n(b,d-1,-t)[1],0
+            b[m]=t;s,b[m]=-n(b,d-1,-t)[1],0
             if s>x:x,y=s,m
     return y,x
 def g():
@@ -19,12 +18,12 @@ def g():
         p(b)
         if all(b)or(e(b,w)or e(b,-w)):
             if i('?')!='y':break
-            g();break
+            g()
+            break
         if w>0:
             u=i(':')
             if u.isdigit():
                 u=int(u)-1
                 if u<9&~b[u]:b[u],w=-1,-1
         (m,s),b[m],w=n(b,8,1),1,1
-i=input
-g()
+i=input;g()
