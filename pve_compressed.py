@@ -9,18 +9,13 @@ def n(b,d,t):
             b[m]=t;s,b[m]=-n(b,d-1,-t)[1],0
             if s>x:x,y=s,m
     return y,x
-def g():
-    b,w=[0]*9,1
-    while 1:
-        [print([[' ','O','X'][i]for i in b][x:x+3])for x in[0,3,6]]
-        if all(b)or(e(b,w)or e(b,-w)):
-            if input('?')!='y':break
-            g()
-            break
-        if w>0:
-            u=input(':')
-            if u.isdigit():
-                u=int(u)-1
-                if u<9and not b[u]:b[u],w=-1,-1
-        else:(m,s),b[m],w=n(b,8,1),1,1
-g()
+b,w=[0]*9,1
+while 1:
+    [print([[' ','O','X'][i]for i in b][x:x+3])for x in[0,3,6]]
+    if all(b)or(e(b,w)or e(b,-w)):break
+    if w>0:
+        u=input(':')
+        if u.isdigit():
+            u=int(u)-1
+            if u<9and not b[u]:b[u],w=-1,-1
+    else:(m,s),b[m],w=n(b,8,1),1,1
