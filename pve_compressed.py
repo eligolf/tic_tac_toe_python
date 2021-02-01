@@ -22,15 +22,13 @@ def g():
             g()
             break
         if w>0:
-            while 1:
-                u=i(':')
-                if u.isnumeric():
-                    u=int(u)-1
-                    if u<9 and not b[u]:
-                        b[u],w=-1,w*-1
-                        p(b)
-                        break
-        if w<0:
+            u=i(':')
+            if u.isnumeric():
+                u=int(u)-1
+                if u<9 and not b[u]:
+                    b[u],w=-1,w*-1
+                    p(b)
+        else:
             m,s=n(b,8,1)
             b[m],w=1,w*-1
             p(b)
