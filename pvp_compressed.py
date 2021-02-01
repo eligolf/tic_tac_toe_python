@@ -1,22 +1,9 @@
-def p(b):
-    c = ['-' if i == 0 else 'O' if i == -1 else 'X' if i == 1 else i for i in b]
-    [print(f'\n{c[r*3:3+r*3]}') if r == 0 else print(c[r*3:3+r*3]) for r in range(3)]
-def w(b):
-    for l in ([0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]):
-        if b[l[0]] == b[l[1]] == b[l[2]] != 0: return 1
-def r():
-    b, t = [0]*9, 1
-    p(b)
-    while 1:
-        u = input('\nPlease enter your move (1-9): ')
-        if u.isnumeric():
-            u = int(u)-1
-            if u in range(9) and b[u] == 0:
-                b[u], t = t, t*-1
-                p(b)
-        if w(b) or 0 not in b:
-            x = f'\n{"X" if t == -1 else "O"} won!' if w(b) else 'Game drawn!'
-            if input(f'{x} Do you want to play again (y/n)? ') != 'y': break
-            r()
-            break
-r()
+def e(b):return any([b[i]==b[i+d]==b[i+2*d]!=0 for i,d in((0,1),(3,1),(6,1),(0,3),(1,3),(2,3),(0,4),(2,2))])
+b,w=[0]*9,1
+while 1:
+    [print([[' ','O','X'][i]for i in b][x:x+3])for x in[0,3,6]]
+    if all(b)or e(b):break
+    u=input()
+    if u.isdigit():
+        u=int(u)-1
+        if u<9and not b[u]:b[u],w=w,w*-1
