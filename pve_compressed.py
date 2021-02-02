@@ -1,6 +1,4 @@
-def e(b,t):
-    for i,d in(0,1),(3,1),(6,1),(0,3),(1,3),(2,3),(0,4),(2,2):
-        if b[i]==b[i+d]==b[i+2*d]==t:return 1
+def e(b,t):return any([b[i]==b[i+d]==b[i+2*d]==t for i,d in((0,1),(3,1),(6,1),(0,3),(1,3),(2,3),(0,4),(2,2))])
 def n(b,d,t):
     if e(b,t):return 0,1
     if e(b,-t):return 0,-1
