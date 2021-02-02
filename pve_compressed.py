@@ -1,4 +1,6 @@
-def e(b):return any([b[i]==b[i+d]==b[i+2*d]!=0 for i,d in((0,1),(3,1),(6,1),(0,3),(1,3),(2,3),(0,4),(2,2))])
+def e(b,t):
+    for i,d in(0,1),(3,1),(6,1),(0,3),(1,3),(2,3),(0,4),(2,2):
+        if b[i]==b[i+d]==b[i+2*d]==t:return 1
 def n(b,d,t):
     if e(b,t):return 0,1
     if e(b,-t):return 0,-1
@@ -12,7 +14,7 @@ def n(b,d,t):
 b,w=[0]*9,1
 while 1:
     [print([[' ','O','X'][i]for i in b][x:x+3])for x in[0,3,6]]
-    if all(b)or e(b):break
+    if all(b)or e(b,w)or e(b,-w):break
     if w>0:
         u=input()
         if u.isdigit():
