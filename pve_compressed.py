@@ -17,5 +17,5 @@ while 1:
         u=input()
         if u.isdigit():
             u=int(u)-1
-            if 0<u<9and not b[u]:b[u],w=-1,-1
+            if -1<u<9and not b[u]:b[u],w=-1,-1
     else:m,b[m],w=n(b,1)[0],1,1
