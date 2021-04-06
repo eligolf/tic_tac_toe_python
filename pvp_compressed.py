@@ -6,4 +6,4 @@ while 1:
     u=input()
     if u.isdigit():
         u=int(u)-1
-        if u<9and not b[u]:b[u],w=w,w*-1
+        if -1<u<9and not b[u]:b[u],w=w,w*-1
